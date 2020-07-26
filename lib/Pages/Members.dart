@@ -95,6 +95,11 @@ class _MembersPageState extends State<MembersPage> {
                 )));
         break;
       case 'View Profile':
+        Navigator.of(context).push(new MaterialPageRoute(
+            builder: (context) => new UserChatProfile(
+              recName: 'Muhammad Dev',
+              phoneNum: '01121749886',
+            )));
         break;
     }
   }

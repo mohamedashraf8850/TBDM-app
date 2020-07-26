@@ -11,3 +11,4 @@ export 'package:tbdm_chat/Pages/nav_drawer.dart';
 export 'package:tbdm_chat/Pages/singleRoom.dart';
 export 'package:tbdm_chat/Pages/Members.dart';
 export 'package:tbdm_chat/Pages/privateChat.dart';
+export 'package:tbdm_chat/Pages/UserChatProfile.dart';

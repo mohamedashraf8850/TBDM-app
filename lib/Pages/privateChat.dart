@@ -39,7 +39,7 @@ class PrivateChatPageState extends State<PrivateChatPage> {
           PopupMenuButton<String>(
             onSelected: handleClick,
             itemBuilder: (BuildContext context) {
-              return {'View Profile', 'Mute', 'Block', 'Report'}
+              return {'View Profile'}
                   .map((String choice) {
                 return PopupMenuItem<String>(
                   value: choice,
@@ -82,6 +82,11 @@ class PrivateChatPageState extends State<PrivateChatPage> {
   void handleClick(String value) {
     switch (value) {
       case 'View Profile':
+        Navigator.of(context).push(new MaterialPageRoute(
+            builder: (context) => new UserChatProfile(
+              recName: 'Muhammad Dev',
+              phoneNum: '01121749886',
+            )));
         break;
 //      case 'Mute':
 //        break;
