@@ -19,7 +19,8 @@ class PrivateChatPageState extends State<PrivateChatPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            CircleAvatar(
+            ClipRRect(
+                borderRadius: BorderRadius.circular(25.0),
                 child: Image.network(
                   'https://img.icons8.com/clouds/2x/user.png',
                   width: 50,

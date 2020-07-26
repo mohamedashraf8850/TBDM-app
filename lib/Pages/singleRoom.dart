@@ -15,25 +15,21 @@ class ChatRoomScreenState extends State<ChatRoomScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            CircleAvatar(
-                child: Image.network(
-                  'https://img.icons8.com/clouds/2x/user.png',
-                  width: 50,
-                  height: 50,
-                )),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                widget.roomName,
-                style: TextStyle(
-                    color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
-              ),
-            ),
-          ],
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Image.network(
+            'https://image.freepik.com/free-vector/geek-logo-design-template_7492-36.jpg',
+            width: 50,
+            height: 50,
+          ),
+          ),
+        ),
+        title: Text(
+          widget.roomName,
+          style: TextStyle(
+              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
         ),
         actions: <Widget>[
           PopupMenuButton<String>(

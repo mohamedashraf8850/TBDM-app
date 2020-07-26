@@ -36,7 +36,8 @@ class _MainRoomsPageState extends State<MainRoomsPage> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.network('https://image.freepik.com/free-vector/geek-logo-design-template_7492-36.jpg',width: 150,height: 150,),
+                        child: Image.network(
+                          'https://image.freepik.com/free-vector/geek-logo-design-template_7492-36.jpg',width: 150,height: 150,),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),

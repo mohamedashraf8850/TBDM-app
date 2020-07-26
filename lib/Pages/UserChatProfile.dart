@@ -3,7 +3,8 @@ import 'package:tbdm_chat/utlis/exports.dart';
 class UserChatProfile extends StatefulWidget {
   final String recName, phoneNum;
 
-  const UserChatProfile({Key key, this.recName ,this.phoneNum}) : super(key: key);
+  const UserChatProfile({Key key, this.recName, this.phoneNum})
+      : super(key: key);
 
   @override
   _UserChatProfileState createState() => _UserChatProfileState();
@@ -13,6 +14,7 @@ class _UserChatProfileState extends State<UserChatProfile> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: CustomScrollView(
           slivers: <Widget>[
@@ -41,7 +43,36 @@ class _UserChatProfileState extends State<UserChatProfile> {
                   )),
             ),
             new SliverList(
-                delegate: new SliverChildListDelegate([textTBDM(widget.recName,size: 20,fontWeight: FontWeight.bold), textTBDM(widget.phoneNum,size: 15,fontWeight: FontWeight.normal)])),
+                delegate: new SliverChildListDelegate([
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    textTBDM('Name',
+                        size: 15.0, fontWeight: FontWeight.normal,color: Colors.black),
+                    SizedBox(width: 15,),
+                    textTBDM(widget.recName, size: 20.0, fontWeight: FontWeight.bold),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    textTBDM('Phone Number',
+                        size: 15.0, fontWeight: FontWeight.normal,color: Colors.black),
+                    SizedBox(width: 15,),
+                    textTBDM(widget.phoneNum,
+                        size: 15.0, fontWeight: FontWeight.bold),
+                  ],
+                ),
+              ),
+
+            ])),
           ],
         ),
       ),
