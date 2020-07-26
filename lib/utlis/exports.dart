@@ -9,3 +9,5 @@ export 'package:tbdm_chat/utlis/widgets.dart';
 export 'package:tbdm_chat/Pages/introGuider.dart';
 export 'package:tbdm_chat/Pages/nav_drawer.dart';
 export 'package:tbdm_chat/Pages/singleRoom.dart';
+export 'package:tbdm_chat/Pages/Members.dart';
+export 'package:tbdm_chat/Pages/privateChat.dart';

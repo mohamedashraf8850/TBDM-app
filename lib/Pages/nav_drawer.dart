@@ -43,7 +43,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
         color: TBColor.withOpacity(0.3),
         child: Column(
           children: <Widget>[
-            CollapsingListTile(title: 'Private Chats', icon: Icons.group, animationController: _animationController,),
+            CollapsingListTile(title: 'Chats', icon: Icons.message, animationController: _animationController,),
             Divider(color: Colors.grey, height: 40.0,),
             Expanded(
               child: ListView.separated(
