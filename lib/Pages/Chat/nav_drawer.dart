@@ -1,4 +1,4 @@
-import 'package:tbdm_chat/utlis/Exports.dart';
+import 'package:tbdm_chat/utlis/exports.dart';
 
 List<NavigationModel> navigationItems;
 
@@ -57,7 +57,6 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                         currentSelectedIndex = counter;
                         print(currentSelectedIndex);
                       });
-                      //controller.jumpToPage(currentSelectedIndex); // for regular jump
                       Pagecontroller.animateToPage(currentSelectedIndex, curve: Curves.decelerate, duration: Duration(milliseconds: 300)); // for animated jump. Requires a curve and a duration
                     },
                     isSelected: currentSelectedIndex == counter,
