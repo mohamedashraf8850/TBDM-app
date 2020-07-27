@@ -97,7 +97,7 @@ class ChatMessage extends StatelessWidget {
   }
 }
 
-Widget textTBDM(String text, {color, size, fontWeight, maxLines, align, dec}) {
+Widget textTBDM(String text, {color, double size, fontWeight, maxLines, align, dec}) {
   return Text(text,
       style: TextStyle(
           color: color == null ? TBColor : color,

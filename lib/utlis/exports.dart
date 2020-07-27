@@ -15,3 +15,4 @@ export 'package:tbdm_chat/Pages/Chat/singleRoom.dart';
 export 'package:tbdm_chat/Pages/Chat/UserChatProfile.dart';
 //Auctions
 export 'package:tbdm_chat/Pages/Auctions/MainAuctions.dart';
+export 'package:tbdm_chat/Pages/Auctions/AuctionDetails.dart';
