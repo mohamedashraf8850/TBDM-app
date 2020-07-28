@@ -11,6 +11,8 @@ class AuctionDetailsPage extends StatefulWidget {
 }
 
 class _AuctionDetailsPageState extends State<AuctionDetailsPage> {
+  TextEditingController priceController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +27,7 @@ class _AuctionDetailsPageState extends State<AuctionDetailsPage> {
             delegate: SliverChildBuilderDelegate((_, index) {
               return Padding(
                 padding: const EdgeInsets.only(
-                    top: 50.0, right: 15.0, left: 15.0,bottom: 5.0),
+                    top: 50.0, right: 15.0, left: 15.0, bottom: 5.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -137,7 +139,34 @@ class _AuctionDetailsPageState extends State<AuctionDetailsPage> {
                           width: MediaQuery.of(context).size.width - 150,
                           child: RaisedButton(
                             onPressed: () {
-                              print("اشترك ");
+                              showDialog(
+                                  context: context,
+                                  child: new AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    title: new Text("Post Price"),
+                                    content: new TextField(
+                                      controller: priceController,
+                                      decoration: InputDecoration(
+                                          hintText: 'ex: 5.000'),
+                                    ),
+                                    actions: <Widget>[
+                                      textTBDM('Increment Value : 1.000 L.E',
+                                          align: TextAlign.start),
+                                      SizedBox(width: 20.0),
+                                      RaisedButton(
+                                        onPressed: () {},
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10)),
+                                        child: Text('Post'),
+                                        elevation: 2,
+                                        textColor: Colors.white,
+                                        color: TBColor,
+                                      )
+                                    ],
+                                  ));
                             },
                             child: Text('Post Price'),
                             elevation: 2,

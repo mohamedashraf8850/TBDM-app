@@ -1,5 +1,7 @@
 import 'package:tbdm_chat/utlis/exports.dart';
 
+import 'Pages/Auctions/CreateAuction.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
      // home: IntroGuider(),
-      home: MainAuctions(),
+    //  home: MainAuctions(),
+      home: MyHomePage(),
     );
   }
 }
